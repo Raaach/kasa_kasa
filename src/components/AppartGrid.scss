@@ -1,0 +1,25 @@
+@use "../scss/variables.scss" as colors;
+
+.grid{
+    background-color: colors.$background-dark;
+    min-height: 45vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; //surement à remplacer par row-gap et column-gap
+    padding: 1.2rem;
+    justify-content: space-around;
+    &>*{
+        width:100%;
+        max-width: 19rem;
+    }
+
+}
+
+@media screen and (width <= 768px){
+    .grid{
+        justify-content: center;
+        background-color: inherit;
+        padding: 0;
+    }
+}

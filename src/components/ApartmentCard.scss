@@ -1,0 +1,33 @@
+@use "../scss/variables.scss" as *;
+
+.apartment{
+    background-size: cover;
+    position: relative;
+    border-radius: 0.5rem;
+    flex-basis: 30%;
+    display: grid;
+    align-items: end;
+    min-height: 200px;
+    min-width: 200px;
+    img { //c'est un class qu'on peut mettre dans html pour avoir une bordure en plus
+        width: 100%;
+        height: 15rem;
+        object-fit: cover;
+        border-radius: .5rem;
+        box-shadow: rgb(149 157 165/20%) 0px 8px 24px;
+        filter:brightness(80%) //pour pouovir lire lécritutre
+    }
+    @media screen and (width <= 768px) {
+        .apartment{
+            flex-basis: 100%;
+        }
+    }
+    & &__subtitle{
+        width: 50%;
+        position: absolute;
+        flex-wrap: wrap;
+        margin-inline-start: 0.5rem; /*gauche*/
+        margin-block-end: 0.5rem;   /*bas*/
+        color: $color-tertiary;
+    }
+}
